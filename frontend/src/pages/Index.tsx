@@ -6,6 +6,8 @@ import BottomNav from '../components/BottomNav';
 import HeaderNav from '../components/HeaderNav';
 import BrowseLibrary from '../components/BrowseLibrary';
 import { books, currentlyReading, readingStats } from '../data/dummyData';
+import { MailOpen, UserRoundPen, ChevronRight, BellRing, CircleHelp } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState('home');
@@ -119,6 +121,49 @@ const Index = () => {
                 <div className="text-2xl font-bold text-purple-600">{readingStats.avgRating}</div>
                 <div className="text-sm text-gray-600">Avg Rating</div>
               </div>
+            </div>
+            <div className="flex justify-center">
+            <Button className="
+             w-full max-w-sm px-4 py-3 bg-white dark:bg-black
+                 text-black dark:text-white rounded-md
+                 flex items-center justify-between hover:bg-grey-100 dark:hover:bg-grey-100">
+              <div className="flex items-center space-x-3">
+                <div className="w-8 h-8 rounded-full bg-gray-500 flex items-center justify-center text-white">
+                  <UserRoundPen size={18} />
+                </div>
+                <span className="text-sm font-medium">Account Setting</span>
+                
+              </div>
+              <ChevronRight/>
+            </Button>
+            </div>
+            <div className="flex justify-center">
+            <Button className="
+             w-full max-w-sm px-4 py-3 bg-white dark:bg-black
+                 text-black dark:text-white rounded-md
+                 flex items-center justify-between hover:bg-grey-100 dark:hover:bg-grey-100">
+              <div className="flex items-center space-x-3">
+                <div className="w-8 h-8 rounded-full bg-gray-500 flex items-center justify-center text-white">
+                  <BellRing size={18} />
+                </div>
+                <span className="text-sm font-medium">Notification Setting</span>
+              </div>
+              <ChevronRight/>
+            </Button>
+            </div>
+            <div className="flex justify-center">
+            <Button className="
+             w-full max-w-sm px-4 py-3 bg-white dark:bg-black
+                 text-black dark:text-white rounded-md
+                 flex items-center justify-between hover:bg-grey-100 dark:hover:bg-grey-100">
+              <div className="flex items-center space-x-3">
+                <div className="w-8 h-8 rounded-full bg-gray-500 flex items-center justify-center text-white">
+                  <UserRoundPen size={18} />
+                </div>
+                <span className="text-sm font-medium">Help Center</span>
+              </div>
+              <ChevronRight/>
+            </Button>
             </div>
           </div>
         );
