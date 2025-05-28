@@ -10,8 +10,9 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { REGEXP_ONLY_CHARS } from "input-otp"
 
-export function LoginForm({
+export function AccountSetting({
   className,
   ...props
 }: React.ComponentPropsWithoutRef<"div">) {
@@ -34,19 +35,11 @@ export function LoginForm({
     }
   }
 
-  const handleLoginGoogleTemporary = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault()
-    navigate ("/dashboard")
-  }
-
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card>
         <CardHeader>
-          <CardTitle className="text-2xl">Login</CardTitle>
-          <CardDescription>
-            Enter your email below to login to your account
-          </CardDescription>
+          <CardTitle className="text-2xl">Account Setting</CardTitle>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit}>
@@ -64,28 +57,40 @@ export function LoginForm({
               </div>
               <div className="grid gap-2">
                 <div className="flex items-center">
-                  <Label htmlFor="password">Password</Label>
-                  <a
-                    href="/forgot-password"
-                    className="ml-auto inline-block text-sm underline-offset-4 hover:underline"
-                  >
-                    Forgot your password?
-                  </a>
+                  <Label htmlFor="Full-Name">Full Name</Label>
                 </div>
-                <Input id="password" type="password" required />
+                <Input 
+                id="Full-Name" 
+                type="name" 
+                pattern={REGEXP_ONLY_CHARS} 
+                placeholder="Asep Surasep" 
+                required />
+              </div>
+              <div className="grid gap-2">
+                <div className="flex items-center">
+                  <Label htmlFor="Favorite-Genre">Favorite Genre</Label>
+                </div>
+                <Input 
+                id="Favorite-Genre" 
+                type="genre" 
+                pattern={REGEXP_ONLY_CHARS} 
+                placeholder="Fantasy" 
+                required />
+              </div>
+              <div className="grid gap-2">
+                <div className="flex items-center">
+                  <Label htmlFor="Bio">Bio User</Label>
+                </div>
+                <Input 
+                id="bio" 
+                type="bio" 
+                pattern={REGEXP_ONLY_CHARS} 
+                placeholder="Love Books" 
+                required />
               </div>
               <Button type="submit" className="w-full">
-                Login
+                Submit
               </Button>
-              <Button variant="outline" className="w-full" onClick={handleLoginGoogleTemporary}>
-                Login with Google
-              </Button>
-            </div>
-            <div className="mt-4 text-center text-sm">
-              Don&apos;t have an account?{" "}
-              <a href="/signup" className="underline underline-offset-4">
-                Sign up
-              </a>
             </div>
           </form>
         </CardContent>

@@ -9,6 +9,7 @@ import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import Forgot from "./pages/ForgotPassword";
 import Verify from "./pages/VerifyForm";
+import AccountSet from "./pages/AccountSetting";
 import { ThemeProvider } from "@/components/ThemeProvider"
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/login" element={<Login/>}/>
           <Route path="/forgot-password" element={<Forgot/>}/>
           <Route path="/verify-code" element={<Verify/>}/>
+          <Route path="/account-setting" element={<AccountSet/>}/>
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
