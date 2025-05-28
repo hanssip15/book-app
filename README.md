@@ -301,9 +301,8 @@ Dear recruiter from PT Citra Niaga Teknologi,
 Thanks for giving me the opportunity to apply in CNT Tnternship Program.
 
 Here some note about what i did with my homework test.
-
 Roles: Frontend
-What i Do:
+Heres what I Do:
 1. Build UI For Authentication
 2. Build UI For User Setting
 3. Adding slight changes at components/HeaderNav.tsx
