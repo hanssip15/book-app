@@ -308,6 +308,13 @@ What i Do:
 2. Build UI For User Setting
 3. Adding slight changes at components/HeaderNav.tsx
 
+at first, I want to try make an modular page for each menu in index, but there is a problem so i decided to use current implementation.
+
+Work Flow:
+1. to get into login menu, you can click on profile icon beside Bell Icon.
+2. you must follow the restriction on auth user except login with Google, it will by pass and send you immediately to dashboard menu.
+3. the forgot password and sign in page already work.
+
 Once again, thanks for the opportunity. Me personaly got many experience and idea with this homework test. 
 I Hope I can join you guys at PT CNT.
 
